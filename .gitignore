@@ -8,6 +8,7 @@ logs
 **/*.backup.*
 **/*.back.*
 *.sublime*
+assets/
 ### VisualStudioCode ###
 /.vscode
 !.vscode/settings.json

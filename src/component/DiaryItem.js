@@ -37,10 +37,6 @@ const DiaryItemWrapper = styled.div`
         }
 
         &.emotion_img_wrapper_5 {
-            background-color: #768290;
-        }
-
-        &.emotion_img_wrapper_6 {
             background-color: #ffc0bc;
         }
 

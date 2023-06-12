@@ -1,12 +1,13 @@
 import React from 'react'
+import DiaryEditor from './DiaryEditor'
 
-function New() {
+const New = () => {
   return (
     <div>
-      <h1>New</h1>
-      <p>새 페이지 입니다.</p>
+      <DiaryEditor />
     </div>
   )
 }
 
 export default New
+

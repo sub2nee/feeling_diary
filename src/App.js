@@ -73,13 +73,7 @@ const dummyData = [
       emotion: 5,
       content: "오늘의 일기 5번",
       date: new Date().getTime()
-    },
-    {
-        id: 6,
-        emotion: 6,
-        content: "오늘의 일기 6번",
-        date: new Date().getTime()
-      }
+    }
   ]
 
 function App() {

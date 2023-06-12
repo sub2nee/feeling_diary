@@ -45,22 +45,21 @@ const filterOptionList = [
     { value: 'bad', name: '안좋은 감정만' },
 ];
 
-const ControlMenu = ({ value, onChange, optionList }) => {
+const ControlMenu =React.memo(({ value, onChange, optionList }) => {
     return (
       <select
-        className="ControlMenu"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-      >
-        {optionList.map((it, idx) => (
-          <option key={idx} value={it.value}>
-            {it.name}
-          </option>
-        ))}
-      </select>
-    );
-  };
-  
+      className="ControlMenu"
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+    >
+      {optionList.map((it, idx) => (
+        <option key={idx} value={it.value}>
+          {it.name}
+        </option>
+      ))}
+    </select>
+  );
+});
 
 const DiaryList = ({ diaryList }) => {
     const navigate = useNavigate();

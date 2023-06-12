@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 //component
-import MyHeader from '../component/MyHeader';
-import MyButton from '../component/MyButton';
+import MyHeader from './MyHeader';
+import MyButton from './MyButton';
 import { getStringDate } from '../util/date';
 import { emotionList } from '../util/emotion.js';
 import { DiaryDispatchContext } from '../App';
 import styled from 'styled-components';
-import EmotionItem from '../component/EmotionItem';
+import EmotionItem from './EmotionItem';
 
 const DiaryEditorSection = styled.section`
     margin-bottom: 40px;
@@ -69,9 +69,9 @@ const DiaryEditor = ({ isEdit, originData }) => {
     const { onCreate, onEdit, onRemove } = useContext(DiaryDispatchContext);
 
     // EmotionItem 클릭 시 해당 state로 변화
-    const handleClickEmote = (emotion) => {
+    const handleClickEmote = useCallback((emotion) => {
         setEmotion(emotion);
-    };
+      }, []);
    
     // 아무 것도 작성하지 않았다면(1글자 미만) textarea 참조받아 focus
     const handleSubmit = () => {

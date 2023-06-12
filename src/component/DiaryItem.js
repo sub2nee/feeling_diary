@@ -68,6 +68,8 @@ const DiaryItemWrapper = styled.div`
 
 const DiaryItem = ({ id, emotion, content, date }) => {
     const navigate = useNavigate();
+    const env = process.env;
+    env.PUBLIC_URL = env.PUBLIC_URL || "";
     const strDate = new Date(parseInt(date)).toLocaleDateString();
 
     const goDetail = () => {
@@ -101,4 +103,4 @@ const DiaryItem = ({ id, emotion, content, date }) => {
     );
 };
 
-export default DiaryItem;
+export default React.memo(DiaryItem);

@@ -9,6 +9,7 @@ logs
 **/*.back.*
 *.sublime*
 assets/
+favicon.png
 ### VisualStudioCode ###
 /.vscode
 !.vscode/settings.json

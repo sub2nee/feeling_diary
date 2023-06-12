@@ -87,6 +87,11 @@ const Diary = () => {
     //조건 : 일기데이터가 1개라도 있을 때만 가져오기 (id 오류 방지 형변환)
     //deps : id 나 diaryList가 변할 때만 가져오기
 
+    useEffect(()=>{
+        const titleElement = document.getElementsByTagName("title")[0];
+        titleElement.innerHTML = `Feeling_Diary - ${id}번 일기`;
+      },[id]);
+
     useEffect(() => {
         if (diaryList.length >= 1) {
             const targetDiary = diaryList.find(
@@ -94,7 +99,6 @@ const Diary = () => {
             );
             console.log(targetDiary); //가져온 id의 일기데이터
 
-            //현재 상세페이지에서 보여줘야하는 데이터를 id 기준으로 찾아온다면
             if (targetDiary) {
                 //일기가 존재할때
                 setData(targetDiary);

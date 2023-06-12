@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 const EmotionItems = styled.div`
@@ -85,4 +86,4 @@ const EmotionItem = ({
     );
 };
 
-export default EmotionItem;
+export default React.memo(EmotionItem);

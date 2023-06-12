@@ -82,7 +82,8 @@ function App() {
     console.log(dummyData);
     
     //일기 id로 사용
-    const dataId = useRef(0);
+    // dummyData를 사용하게 될 경우 key의 초기값 변경
+    const dataId = useRef(6);
 
     //CREATE
     const onCreate = (date, content, emotion) => {
